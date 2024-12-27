@@ -1,0 +1,7 @@
+django
+djangorestframework
+django-filter
+graphene-django       # Your anti-virus may find it vulnerable,but you can temporarily disable real time protection.
+psycopg2-binary
+pytest-django
+pytest
