@@ -39,10 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blogApp',
 
-    # Third party apps
-    'django-filter',
-    'graphene-django',
-    'rest_framework',
+    
 ]
 
 MIDDLEWARE = [
@@ -81,14 +78,11 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'blog',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres0099!',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 GRAPHENE = {
     'SCHEMA': 'blogApp.schema.schema',
