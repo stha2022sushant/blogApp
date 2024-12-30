@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'strawberry_django',
     'blogApp',
-    'graphene_django',
+    
 
     
 ]

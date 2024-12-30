@@ -1,11 +1,11 @@
 from django.contrib import admin
-from django.urls import path, include
-from graphene_django.views import GraphQLView
-
+from django.urls import include, path
+from strawberry.django.views import AsyncGraphQLView
+from blogApp.schema import schema
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blogApp.urls')),
-    path('graphql/', GraphQLView.as_view(graphiql=True)),
+    path('graphql/', AsyncGraphQLView.as_view(schema=schema)),  # Direct mapping
+    path('blogApp/', include('blogApp.urls')),  # Optional app URLs
 ]
 
